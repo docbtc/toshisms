@@ -13,7 +13,7 @@ client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 coinbase_price_data = json.load(urlopen("https://api.coinbase.com/v2/prices/BTC-USD/spot/"))
 usd_bitcoin_price = float(coinbase_price_data['data']['amount'])
 
-print ("The price is: ") + str(usd_bitcoin_price)
+print ("The price is: " + str(usd_bitcoin_price)
 
 print ('Sending Price')
 client.messages.create(
