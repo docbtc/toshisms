@@ -15,11 +15,12 @@ usd_bitcoin_price = float(coinbase_price_data['data']['amount'])
 
 print ("The price is: " + str(usd_bitcoin_price)
 
-print ("Sending Price")
-client.messages.create(
+message = client.messages.create(
 	to=os.environ['PHONE_TO'],
 	from_=os.environ['PHONE_FROM'], 
 	body=("The current bitcoin price is :" + " " + "1 BTC:" + str(usd_bitcoin_price) + "USD")
 	)
+	
+print(message.sid)
 
 time.sleep(1 * 60)
