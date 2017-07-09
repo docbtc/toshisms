@@ -10,6 +10,7 @@ AUTH_TOKEN = os.environ['TWILIO_AUTH']
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
+if __name__ == "__main__":
 
 coinbase_price_data = json.load(urllib2.urlopen("https://api.coinbase.com/v2/prices/BTC-USD/spot/"))
 usd_bitcoin_price = float(coinbase_price_data['data']['amount'])
@@ -22,4 +23,5 @@ print 'Sending Price'
 				to=os.environ['PHONE_TO'],
 				from_=os.environ['PHONE_FROM'], 
 				body="The current bitcoin price is : " + " " + "1 BTC:" + str(usd_bitcoin_price) + "USD")
+
 time.sleep(1 * 60)
