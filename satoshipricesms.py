@@ -10,11 +10,8 @@ AUTH_TOKEN = os.environ['TWILIO_AUTH']
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
-if __name__ == "__main__":
-
 coinbase_price_data = json.load(urllib2.urlopen("https://api.coinbase.com/v2/prices/BTC-USD/spot/"))
 usd_bitcoin_price = float(coinbase_price_data['data']['amount'])
-
 
 print "The price is : " + str(usd_bitcoin_price)
 
