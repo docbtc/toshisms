@@ -7,6 +7,7 @@ import os
 
 ACCOUNT_SID = os.environ['TWILIO_ID']  
 AUTH_TOKEN = os.environ['TWILIO_AUTH'] 
+
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 coinbase_price_data = json.load(urlopen("https://api.coinbase.com/v2/prices/BTC-USD/spot/"))
