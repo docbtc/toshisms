@@ -1,5 +1,5 @@
 import json
-import urllib2
+from urllib.request import urlopen
 import time
 from twilio.rest import TwilioRestClient
 import os
