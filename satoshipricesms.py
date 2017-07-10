@@ -10,6 +10,8 @@ AUTH_TOKEN = os.environ['TWILIO_AUTH']
 
 client = Client('ACCOUNT_SID', 'AUTH_TOKEN')
 
+
+if __name__ == "__main__":
 coinbase_price_data = json.load(urlopen("https://api.coinbase.com/v2/prices/BTC-USD/spot/"))
 usd_bitcoin_price = float(coinbase_price_data['data']['amount'])
 
