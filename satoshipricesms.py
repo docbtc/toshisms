@@ -25,4 +25,4 @@ if __name__ == "__main__":
 	)
 
 	
-	time.sleep(1 * 60)
+	time.sleep(60 * 60)
