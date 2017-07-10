@@ -8,7 +8,7 @@ import os
 ACCOUNT_SID = os.environ['TWILIO_ID']  
 AUTH_TOKEN = os.environ['TWILIO_AUTH'] 
 
-client = Client('ACCOUNT_SID', 'AUTH_TOKEN')
+client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 
 if __name__ == "__main__":
